@@ -1,0 +1,17 @@
+GET http://localhost:3000/api/joblist
+
+
+###
+
+POST http://localhost:3000/api/poll
+Content-Type: application/json
+
+{
+    "email": "jane@bronxsoftware.org",
+    "JobTitle": "Financial Analyst",
+    "CreatorEmail": "john@bronxsoftare.org"
+}
+
+###
+
+GET http://localhost:3000/api/results

@@ -2,11 +2,21 @@ require("dotenv").config({path:__dirname+'/.env'}); // read the contents of the 
 const express = require("express"); // load the node.js webserver
 const app = express();
 
+console.log('STEP 1')
+
 const cors = require("cors"); // load the cross-origin resource sharing management tool
 app.use(cors())
 
+app.use((req,res,next)=> {
+  console.log(req.url)
+
+  next()
+})
+
 app.use(express.json()); // configure the webserver to convert all incoming and outgoing data to json format
 app.use("/api", require("./routes/poll")); // load our routes file for api calls
+
+console.log('STEP 2')
 
 // for production we must serve the HTML page that holds the code that runs in the browser
 if (process.env.NODE_ENV==='PROD'){ 
