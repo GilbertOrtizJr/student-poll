@@ -1,7 +1,7 @@
 const dbUserConn = require("../config/dbConnection"); // load the database connection
-console.log("loading BCRYPT")
+console.log("loading BCRYPT");
 const bcrypt = require("bcrypt"); // load the bcrypt cypher module
-console.log('load BCRYPT complete')
+console.log('load BCRYPT complete');
 /***********
  * The joblist function returns the list of job titles with additional statistical information
  **********/
